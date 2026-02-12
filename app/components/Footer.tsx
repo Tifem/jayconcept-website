@@ -49,9 +49,7 @@ export default function Footer() {
             </div>
         </div>
         
-        <div className="mt-8 text-center text-xs text-gray-600 flex items-center justify-center gap-1">
-            Made with <Heart size={12} className="text-red-500 fill-red-500" /> by Jay Concept
-        </div>
+        
       </div>
     </footer>
   );
