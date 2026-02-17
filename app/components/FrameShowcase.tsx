@@ -16,7 +16,7 @@ const products: Product[] = [
   { src: "/images/combo package.jpeg", title: "Gift Combo Package", description: "Perfect gift set including diary, bottle, and pen.", price: "₦25,000" },
   { src: "/images/customized bottle.jpeg", title: "Custom Water Bottle", description: "Durable aluminum bottle with custom print.", price: "₦12,000" },
   { src: "/images/apron.jpeg", title: "Branded Apron", description: "High-quality apron for kitchen or workspace branding.", price: "₦10,000" },
-  { src: "/images/facecap.jpg", title: "Face Cap", description: "Elegant face cap for professional use.", price: "₦3,500" },
+  { src: "/images/facecap.jpg", title: "Face Cap", description: "Elegant face cap for professional use.", price: "₦6,000" },
   { src: "/images/jotter2.jpeg", title: "Event Souvenir Jotter", description: "Customized jotters perfect for events and parties.", price: "₦80,000" },
   { src: "/images/frameclock.jpg", title: "Frame Clock", description: "Functional art combining a timepiece with a photo frame.", price: "₦25,000" },
   { src: "/images/throwpillow.jpg", title: "Custom Throw Pillow", description: "Cozy and personalized throw pillows.", price: "₦15,000" },
@@ -26,7 +26,7 @@ export default function FrameShowcase() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   return (
-    <section id="products" className="py-20 bg-stone-50">
+    <section id="products" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Exclusive Product Collection</h2>

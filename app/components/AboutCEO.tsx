@@ -8,7 +8,7 @@ export default function AboutCEO() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section id="about-ceo" className="py-20 bg-white">
+    <section id="about-ceo" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
           
