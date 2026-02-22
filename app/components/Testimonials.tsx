@@ -7,13 +7,13 @@ const testimonials = [
   {
     name: "Anthony Siji",
     role: "Writer",
-    content: "First of, I wasn’t even expecting the mug, you didn’t just add a gift but a print on the gift, am even more happier with the gift than the jotter 😂 the jotter were very okay, good quality, nice concept maybe because it’s Jay concept. Definitely going to come back for more!",
+    content: "First of, I wasn’t even expecting the mug, you didn’t just add a gift but a print on the gift, am even more happier with the gift than the jotter  the jotter were very okay, good quality, nice concept maybe because it’s Jay concept. Definitely going to come back for more!",
     image: "/images/siji.jpeg",
   },
   {
     name: "Olamide Sulayhko",
     role: "Self Employed",
-    content: "You did a great job on the jotter. I loveeeee it 🥰. And thanks for the mug also ❤️.",
+    content: "You did a great job on the jotter. I loveeeee it . And thanks for the mug also .",
     image: "/images/olamide.jpeg",
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
   {
     name: "David Adeyemo",
     role: "Self Employed",
-    content: "I swear d jotter is so fine 😭❤️. Na everybody like am... Someone even ask of your contact",
+    content: "I swear d jotter is so fine. Na everybody like am... Someone even ask of your contact",
     image: "/images/david.jpeg",
   },
   {
