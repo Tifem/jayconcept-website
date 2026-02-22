@@ -14,6 +14,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("Home");
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100">
@@ -21,13 +22,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="relative h-12 w-12 overflow-hidden rounded-full">
-                 <Image 
-                    src="/images/logo1.jpg" 
-                    alt="Jay Concept Logo" 
+            <Link href="/" className="flex items-center gap-2" onClick={() => setActiveLink("Home")}>
+              <div className="relative h-10 w-10 overflow-hidden rounded-full ring-2 ring-blue-100 shadow-sm">
+                 <Image
+                    src="/images/logo1.jpg"
+                    alt="Jay Concept Logo"
                     fill
-                    className="object-contain"
+                    className="object-cover object-center"
                  />
               </div>
               <span className="font-bold text-xl text-gray-900 tracking-tight">Jay Concept</span>
@@ -40,9 +41,20 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200"
+                onClick={() => setActiveLink(link.name)}
+                className={`relative font-medium transition-colors duration-200 pb-1 group ${
+                  activeLink === link.name
+                    ? "text-blue-600"
+                    : "text-gray-600 hover:text-blue-600"
+                }`}
               >
                 {link.name}
+                {/* Animated underline indicator */}
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 rounded-full transition-all duration-300 ${
+                    activeLink === link.name ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
               </Link>
             ))}
           </div>
@@ -68,8 +80,15 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+                onClick={() => {
+                  setActiveLink(link.name);
+                  setIsOpen(false);
+                }}
+                className={`flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  activeLink === link.name
+                    ? "text-blue-600 bg-blue-50 border-l-4 border-blue-600"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                }`}
               >
                 {link.name}
               </Link>

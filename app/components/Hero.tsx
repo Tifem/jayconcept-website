@@ -23,12 +23,12 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[80vh] flex items-center">
+    <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[99vh] flex items-center">
       {/* Background Carousel */}
       {backgroundImages.map((src, index) => (
         <div
           key={src}
-          className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out ${
+          className={`absolute inset-0 z-0 transition-opacity duration-5000 ease-in-out ${
             index === currentImageIndex ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -44,11 +44,11 @@ export default function Hero() {
       ))}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 animate-fade-in-up">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 animate-fade-in-up" style={{ fontFamily: "var(--font-montserrat)" }}>
           Elevate Your Brand with <span className="text-blue-400">Jay Concept</span>
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-200 mb-10 animate-fade-in-up delay-100">
-          Exceptional printing services for souvenirs, customized gifts, corporate branding, and awards. We bring your vision to life with precision and style.
+          Exceptional printing services for souvenirs, customized gifts, branding and awards. We bring your vision to life with precision and style.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-200">
           <Link
